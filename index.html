@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Жизнь Информатика</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background: linear-gradient(125deg, #1a0a2c, #26104c, #0d1a33, #050a14);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        #mainButton {
+            margin-top: 100px;
+            padding: 20px 40px;
+            font-size: 22px;
+            border: 2px solid white;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 0 15px rgba(255,255,255,0.2);
+        }
+        .gallery-container {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+            width: 100%;
+        }
+        .gallery-container.show { display: flex; }
+        img {
+            width: 90%;
+            max-width: 400px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+    <button id="mainButton">Жизнь / Информатика</button>
+    <div class="gallery-container" id="galleryContainer">
+        <img src="771.png">
+        <img src="766.jpg">
+        <img src="746.png">
+        <img src="601.jpg">
+    </div>
+    <script>
+        document.getElementById('mainButton').addEventListener('click', function() {
+            document.getElementById('galleryContainer').classList.add('show');
+            this.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
